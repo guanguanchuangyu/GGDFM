@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GGDFM.UI
+namespace GGDFM.UI.Views.Modules
 {
     /// <summary>
-    /// GHome.xaml 的交互逻辑
+    /// WindowTitle.xaml 的交互逻辑
     /// </summary>
-    public partial class GHome
+    public partial class WindowTitle
     {
-        public GHome()
+        public WindowTitle()
         {
             InitializeComponent();
         }

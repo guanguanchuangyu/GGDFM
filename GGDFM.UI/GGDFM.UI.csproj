@@ -58,6 +58,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Views\Modules\WindowTitle.xaml.cs">
+      <DependentUpon>WindowTitle.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GHome.xaml.cs">
@@ -92,14 +95,24 @@
     <Folder Include="Controls\" />
     <Folder Include="Resources\" />
     <Folder Include="ToolKits\" />
+    <Folder Include="UserControls\" />
     <Folder Include="ViewModels\" />
-    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="GHome.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Modules\WindowTitle.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GGCYUI\GGCYUI.csproj">
+      <Project>{de94674d-5d62-4b44-bd2a-f7c9491d99f4}</Project>
+      <Name>GGCYUI</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
