@@ -8,4 +8,5 @@
     <SolidColorBrush x:Key="MenuMouseOverBg" Color="{DynamicResource PrimaryDarkColor}" Opacity="0.8"/>
     <SolidColorBrush x:Key="MenuMousePressedBg" Color="{DynamicResource PrimaryBlueColor}"/>
     <SolidColorBrush x:Key="BorderBrush" Color="Transparent"></SolidColorBrush>
+    <SolidColorBrush x:Key="MenuBorder" Color="{DynamicResource AssistantDarkColor}"></SolidColorBrush>
 </ResourceDictionary>

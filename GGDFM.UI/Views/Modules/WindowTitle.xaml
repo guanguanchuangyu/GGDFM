@@ -9,6 +9,6 @@
              UseLayoutRounding="True" 
              d:DesignWidth="245" d:DesignHeight="47.439">
     <ContentControl HorizontalAlignment="Left" Margin="14,0,0,0">
-        <Path Fill="Black" SnapsToDevicePixels="True" Stretch="Uniform" Width="18" Height="18" Data="{DynamicResource WindowsGeometry}"/>
+        <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="18" Height="18" Data="{DynamicResource WindowsGeometry}"/>
     </ContentControl>
 </Grid>

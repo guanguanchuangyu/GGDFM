@@ -1,4 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:GGCYUI.Controls.Converters">
+    <converters:BorderCircularConverter x:Key="BorderCircularConverter"></converters:BorderCircularConverter>
+    <converters:KeyToGeometryConverter x:Key="KeyToGeometryConverter"></converters:KeyToGeometryConverter>
 </ResourceDictionary>

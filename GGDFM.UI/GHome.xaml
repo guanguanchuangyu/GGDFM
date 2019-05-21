@@ -1,10 +1,11 @@
-﻿<controls:FWindow x:Class="GGDFM.UI.GHome"
+﻿<controls:FWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="http://www.ggcy/ggcy"
         xmlns:uc="clr-namespace:GGDFM.UI.Views.Modules"
+        xmlns:ViewModels="clr-namespace:GGDFM.UI.ViewModels" x:Class="GGDFM.UI.GHome"
         mc:Ignorable="d"
         Style="{DynamicResource WindowWin10}"
          WindowStartupLocation="CenterScreen"
@@ -12,17 +13,20 @@
          NoClientAreaHeight="38"
          IsFullScreen="False"
          ShowNoClientArea="True"
-        Title="GHome" Height="670" Width="1000">
+        Title="GHome" Height="670" Width="1000" Loaded="FWindow_Loaded">
+    <controls:FWindow.DataContext>
+        <Binding Source="{StaticResource Locator}" Mode="OneWay" Path="Main"/>
+    </controls:FWindow.DataContext>
     <controls:FWindow.NoClientAreaContent>
-        <uc:WindowTitle></uc:WindowTitle>
+        <uc:WindowTitle/>
     </controls:FWindow.NoClientAreaContent>
-    <Grid Background="{DynamicResource MainBg}">
+    <Grid Background="{DynamicResource MainBg}" DataContext="{Binding Source={StaticResource SampleDataSource}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="2*"/>
             <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
         <Grid Grid.Column="0" Background="{DynamicResource MenuBg}">
-            
+            <ListBox Style="{DynamicResource MenuStyle}" ItemTemplate="{DynamicResource MenuDataTemplate}" ItemsSource="{Binding Menu_DataSource}" ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsPanel="{DynamicResource MenuItemsPanelTemplate}"></ListBox>
         </Grid>
     </Grid>
 </controls:FWindow>

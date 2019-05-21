@@ -23,5 +23,13 @@ namespace GGDFM.UI
         {
             InitializeComponent();
         }
+
+        private void FWindow_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            System.Windows.Data.CollectionViewSource menuItemViewModelViewSource = ((System.Windows.Data.CollectionViewSource)(this.FindResource("menuItemViewModelViewSource")));
+            // 通过设置 CollectionViewSource.Source 属性加载数据: 
+            // menuItemViewModelViewSource.Source = [一般数据源]
+        }
     }
 }
