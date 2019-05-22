@@ -3,4 +3,5 @@
                     xmlns:converters="clr-namespace:GGCYUI.Controls.Converters">
     <converters:BorderCircularConverter x:Key="BorderCircularConverter"></converters:BorderCircularConverter>
     <converters:KeyToGeometryConverter x:Key="KeyToGeometryConverter"></converters:KeyToGeometryConverter>
+    <converters:NameToObjectConverter x:Key="NameToObjectConverter"></converters:NameToObjectConverter>
 </ResourceDictionary>

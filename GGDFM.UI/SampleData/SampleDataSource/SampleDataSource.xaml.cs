@@ -47,6 +47,10 @@ namespace Expression.Blend.SampleData.SampleDataSource
         }
     }
 
+    public class Menu_DataSource : System.Collections.ObjectModel.ObservableCollection<Menu_DataSourceItem>
+    { 
+    }
+
     public class Menu_DataSourceItem : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -96,10 +100,25 @@ namespace Expression.Blend.SampleData.SampleDataSource
                 }
             }
         }
-    }
 
-    public class Menu_DataSource : System.Collections.ObjectModel.ObservableCollection<Menu_DataSourceItem>
-    { 
+        private string _Content = string.Empty;
+
+        public string Content
+        {
+            get
+            {
+                return this._Content;
+            }
+
+            set
+            {
+                if (this._Content != value)
+                {
+                    this._Content = value;
+                    this.OnPropertyChanged("Content");
+                }
+            }
+        }
     }
 #endif
 }

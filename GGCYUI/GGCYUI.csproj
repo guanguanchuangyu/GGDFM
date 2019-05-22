@@ -106,6 +106,7 @@
     <Compile Include="Controls\BorderElement.cs" />
     <Compile Include="Controls\Converters\BorderCircularConverter.cs" />
     <Compile Include="Controls\Converters\KeyToGeometryConverter.cs" />
+    <Compile Include="Controls\Converters\NameToObjectConverter.cs" />
     <Compile Include="Controls\FWindow.cs" />
     <Compile Include="Controls\IconElement.cs" />
     <Compile Include="Controls\SimplePanel.cs" />

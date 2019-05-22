@@ -18,6 +18,7 @@
   </xs:complexType>
   <xs:complexType name="Menu_DataSourceItem">
     <xs:attribute name="MenuItemIcon" type="xs:string" />
-    <xs:attribute blend:Format="Lorem ipsum" blend:FormatParameters="4,8" name="MenuItemName" type="xs:string" />
+    <xs:attribute name="MenuItemName" type="xs:string" />
+    <xs:attribute name="Content" type="xs:string" />
   </xs:complexType>
 </xs:schema>

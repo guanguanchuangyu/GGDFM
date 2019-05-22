@@ -18,13 +18,19 @@
     <controls:FWindow.NoClientAreaContent>
         <uc:WindowTitle/>
     </controls:FWindow.NoClientAreaContent>
-    <Grid Background="{DynamicResource MainBg}" DataContext="{Binding Source={StaticResource SampleDataSource}}">
+    <Grid Background="{DynamicResource MainBg}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="2*" MinWidth="44"/>
             <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" Grid.Column="0" SelectedIndex="0" Style="{DynamicResource MenuStyle}"  ItemTemplate="{DynamicResource MenuDataTemplate}" ItemsSource="{Binding Menu_DataSource}" ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsPanel="{DynamicResource MenuItemsPanelTemplate}" d:IsLocked="True"/>
-        <ContentControl IsTabStop="False" Grid.Row="1" Content="{Binding SelectedItem.MenuItemName, ElementName=listBox}" Grid.Column="1">
+        <ListBox x:Name="listBox" Grid.Column="0" 
+                 SelectedIndex="0" 
+                 Style="{DynamicResource MenuStyle}"  
+                 ItemTemplate="{DynamicResource MenuDataTemplate}" 
+                 ItemContainerStyle="{DynamicResource ListBoxItemStyle}" 
+                 ItemsPanel="{DynamicResource MenuItemsPanelTemplate}" 
+                 DataContext="{Binding Source={StaticResource SampleDataSource}}" ItemsSource="{Binding Menu_DataSource}"/>
+        <ContentControl IsTabStop="False" Grid.Row="1" Content="{Binding SelectedItem.Content, ElementName=listBox,Converter={StaticResource NameToObjectConverter }}" Grid.Column="1">
         </ContentControl>
     </Grid>
 </controls:FWindow>
