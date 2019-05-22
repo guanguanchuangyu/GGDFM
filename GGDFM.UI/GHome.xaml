@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:controls="http://www.ggcy/ggcy"
         xmlns:uc="clr-namespace:GGDFM.UI.Views.Modules"
-        xmlns:ViewModels="clr-namespace:GGDFM.UI.ViewModels" x:Class="GGDFM.UI.GHome"
+        xmlns:ViewModels="clr-namespace:GGDFM.UI.ViewModels" 
+        x:Class="GGDFM.UI.GHome"
         mc:Ignorable="d"
         Style="{DynamicResource WindowWin10}"
          WindowStartupLocation="CenterScreen"
@@ -13,20 +14,17 @@
          NoClientAreaHeight="38"
          IsFullScreen="False"
          ShowNoClientArea="True"
-        Title="GHome" Height="670" Width="1000" Loaded="FWindow_Loaded">
-    <controls:FWindow.DataContext>
-        <Binding Source="{StaticResource Locator}" Mode="OneWay" Path="Main"/>
-    </controls:FWindow.DataContext>
+        Title="GHome" Height="670" Width="1000" DataContext="{Binding Main, Mode=OneWay, Source={StaticResource Locator}}">
     <controls:FWindow.NoClientAreaContent>
         <uc:WindowTitle/>
     </controls:FWindow.NoClientAreaContent>
     <Grid Background="{DynamicResource MainBg}" DataContext="{Binding Source={StaticResource SampleDataSource}}">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition  Width="2*"/>
+            <ColumnDefinition  Width="2*" MinWidth="44"/>
             <ColumnDefinition Width="9*"/>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Background="{DynamicResource MenuBg}">
-            <ListBox Style="{DynamicResource MenuStyle}" ItemTemplate="{DynamicResource MenuDataTemplate}" ItemsSource="{Binding Menu_DataSource}" ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsPanel="{DynamicResource MenuItemsPanelTemplate}"></ListBox>
-        </Grid>
+        <ListBox x:Name="listBox" Grid.Column="0" SelectedIndex="0" Style="{DynamicResource MenuStyle}"  ItemTemplate="{DynamicResource MenuDataTemplate}" ItemsSource="{Binding Menu_DataSource}" ItemContainerStyle="{DynamicResource ListBoxItemStyle}" ItemsPanel="{DynamicResource MenuItemsPanelTemplate}" d:IsLocked="True"/>
+        <ContentControl IsTabStop="False" Grid.Row="1" Content="{Binding SelectedItem.MenuItemName, ElementName=listBox}" Grid.Column="1">
+        </ContentControl>
     </Grid>
 </controls:FWindow>

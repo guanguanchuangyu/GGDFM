@@ -11,29 +11,34 @@
         <StackPanel></StackPanel>
     </ItemsPanelTemplate>
     <DataTemplate x:Key="MenuDataTemplate">
-        <Border  BorderThickness="0,0,0,1" BorderBrush="{StaticResource MenuBorder}">
         <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.3*" MaxWidth="18"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <StackPanel Orientation="Horizontal" Margin="0,12,0,12" Grid.Column="1">
-                    <ContentControl VerticalContentAlignment="Center">
-                        <Path Fill="{DynamicResource MainBg}" SnapsToDevicePixels="True" Stretch="Uniform" Width="14" Height="14" 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.3*" MaxWidth="22" MinWidth="18"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--<Border x:Name="Bg"  BorderThickness="0,0,0,1" BorderBrush="{StaticResource MenuBorder}" Grid.ColumnSpan="3"></Border>
+            <StackPanel Orientation="Horizontal" Margin="0,12,0,12" Grid.Column="1">
+                <ContentControl VerticalContentAlignment="Center">
+                    <Path Fill="{DynamicResource MainBg}" SnapsToDevicePixels="True" Stretch="Uniform" Width="14" Height="14" 
                           Data="{Binding MenuItemIcon,Converter={StaticResource KeyToGeometryConverter}}"/>
-                    </ContentControl>
-                    <ContentControl Margin="12,0,0,0" Foreground="{DynamicResource MainBg}" FontSize="{DynamicResource NormalFontSize}" Content="{Binding MenuItemName}" VerticalContentAlignment="Center"></ContentControl>
-                </StackPanel>
-            </Grid>
-        </Border>
+                </ContentControl>
+                <ContentControl Margin="14,0,0,0" Foreground="{DynamicResource MainBg}" FontSize="{DynamicResource NormalFontSize}" Content="{Binding MenuItemName}" VerticalContentAlignment="Center"></ContentControl>
+            </StackPanel>-->
+            <ContentControl VerticalContentAlignment="Center" Margin="0,12,14,12" Grid.Column="1">
+                    <Path Fill="{DynamicResource MainBg}" SnapsToDevicePixels="True" Stretch="Uniform" Width="14" Height="14" 
+                          Data="{Binding MenuItemIcon,Converter={StaticResource KeyToGeometryConverter}}"/>
+            </ContentControl>
+            <ContentControl Grid.Column="2" VerticalAlignment="Center" Foreground="{DynamicResource MainBg}" FontSize="{DynamicResource NormalFontSize}" Content="{Binding MenuItemName}"></ContentControl>
+        </Grid>
     </DataTemplate>
     <Style x:Key="MenuStyle" TargetType="{x:Type ListBox}">
         <Setter Property="Background" Value="{DynamicResource MenuBg}"/>
         <Setter Property="BorderBrush" Value="{StaticResource MenuBorder}"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
-        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Hidden"/>
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
         <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
@@ -64,27 +69,40 @@
         </Setter>
     </Style>
     <Style x:Key="ListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
-        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Background" Value="{DynamicResource MenuBg}"/>
+        <Setter Property="FocusVisualStyle" Value="{StaticResource BaseStyle}"/>
         <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
         <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
         <Setter Property="Padding" Value="0,0,0,0"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource MenuBorder}"/>
+        <Setter Property="BorderThickness" Value="0,0,0,1"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                    <Grid>
+                        <Border x:Name="Bd" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true"></Border>
                         <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                    </Border>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="true">
-                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource MenuMousePressedBg}"/>
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.HighlightTextBrushKey}}"/>
                         </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsSelected" Value="false"/>
+                                <Condition Property="IsMouseOver" Value="true"></Condition>
+                            </MultiTrigger.Conditions>
+                            <!--<Setter Property="Opacity" TargetName="Bd" Value="0.6"/>-->
+                            <Setter Property="Background" Value="{DynamicResource MenuMouseOverBg}" TargetName="Bd"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </MultiTrigger>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
                                 <Condition Property="IsSelected" Value="true"/>
                                 <Condition Property="Selector.IsSelectionActive" Value="false"/>
                             </MultiTrigger.Conditions>
-                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}"/>
+                            <Setter Property="Background" TargetName="Bd" Value="{DynamicResource MenuMousePressedBg}"/>
                             <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightTextBrushKey}}"/>
                         </MultiTrigger>
                         <Trigger Property="IsEnabled" Value="false">

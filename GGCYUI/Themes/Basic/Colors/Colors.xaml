@@ -4,7 +4,7 @@
     <Color x:Key="PrimaryBlueColor">#3ac1c4</Color>
     <Color x:Key="PrimaryYellowColor">#ffc300</Color>
     <Color x:Key="PrimaryPurpleColor">#ac92c2</Color>
-    <Color x:Key=" AssistantWhiteColor">#ffffff</Color>
-    <Color x:Key=" AssistantGrayColor">#f3f4f8</Color>
+    <Color x:Key="AssistantWhiteColor">#ffffff</Color>
+    <Color x:Key="AssistantGrayColor">#f3f4f8</Color>
     <Color x:Key="AssistantDarkColor">#2e3140</Color>
 </ResourceDictionary>
