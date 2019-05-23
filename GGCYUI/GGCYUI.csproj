@@ -88,7 +88,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Styles\Bases\SampleGroupBase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Styles\Button.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Styles\SampleGroup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,6 +117,7 @@
     <Compile Include="Controls\Converters\NameToObjectConverter.cs" />
     <Compile Include="Controls\FWindow.cs" />
     <Compile Include="Controls\IconElement.cs" />
+    <Compile Include="Controls\SampleGroup.cs" />
     <Compile Include="Controls\SimplePanel.cs" />
     <Compile Include="Datas\ValueBoxes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

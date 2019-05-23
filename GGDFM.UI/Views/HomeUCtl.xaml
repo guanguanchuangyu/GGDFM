@@ -3,10 +3,123 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:control="http://www.ggcy/ggcy"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800" Margin="18,24,18,24">
-    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+    <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" d:IsLocked="True">
         <TextBlock Text="项目概况" FontSize="{DynamicResource HeadFontSize}" Foreground="{DynamicResource TextFore}"></TextBlock>
         <TextBlock Text="欢迎回来，【用户名称】" FontSize="{DynamicResource LabelFontSize}" Foreground="{DynamicResource TextFore}" Opacity="0.6"></TextBlock>
     </StackPanel>
+    <Canvas Width="200" Height="32" Background="{DynamicResource MenuBg}" HorizontalAlignment="Right" VerticalAlignment="Top" d:IsLocked="True"></Canvas>
+    <control:SampleGroup Background="{DynamicResource MenuFore}" Grid.Row="1" Margin="0,12,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top">
+        <ContentControl d:IsLocked="True">
+            <Grid Margin="12" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" BorderBrush="{DynamicResource MenuBorder}" CornerRadius="0.5" BorderThickness="1">
+                    <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="17" Height="17" Margin="2" Data="{DynamicResource WindowsGeometry}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="6,0,0,0">
+                    <TextBlock Text="项目得分" FontSize="{DynamicResource SubFontSize}"></TextBlock>
+                    <TextBlock Text="比上月增长20%" FontSize="{DynamicResource MinFontSize}" Opacity="0.6"></TextBlock>
+                </StackPanel>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{DynamicResource LargeFontSize}" Content="98"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl d:IsLocked="True">
+            <Grid Margin="12" HorizontalAlignment="Center" d:IsLocked="True">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" BorderBrush="{DynamicResource MenuBorder}" CornerRadius="0.5" BorderThickness="1" d:IsLocked="True">
+                    <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="17" Height="17" Margin="2" Data="{DynamicResource BubbleTailGeometry}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="6,0,0,0">
+                    <TextBlock Text="项目扣分" FontSize="{DynamicResource SubFontSize}"></TextBlock>
+                    <TextBlock Text="比上月减少20%" FontSize="{DynamicResource MinFontSize}" Opacity="0.6"></TextBlock>
+                </StackPanel>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{DynamicResource LargeFontSize}" Content="12"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl d:IsLocked="True">
+            <Grid Margin="12" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" BorderBrush="{DynamicResource MenuBorder}" CornerRadius="0.5" BorderThickness="1">
+                    <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="17" Height="17" Margin="2" Data="{DynamicResource ErrorGeometry}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="6,0,0,0">
+                    <TextBlock Text="项目评分" FontSize="{DynamicResource SubFontSize}"></TextBlock>
+                    <TextBlock Text="比上月减少10%" FontSize="{DynamicResource MinFontSize}" Opacity="0.6"></TextBlock>
+                </StackPanel>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{DynamicResource LargeFontSize}" Content="100"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl d:IsLocked="True">
+            <Grid Margin="12" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" BorderBrush="{DynamicResource MenuBorder}" CornerRadius="0.5" BorderThickness="1">
+                    <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="17" Height="17" Margin="2" Data="{DynamicResource WindowsGeometry}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="6,0,0,0">
+                    <TextBlock Text="项目完成" FontSize="{DynamicResource SubFontSize}"></TextBlock>
+                    <TextBlock Text="比上月减少10%" FontSize="{DynamicResource MinFontSize}" Opacity="0.6"></TextBlock>
+                </StackPanel>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{DynamicResource LargeFontSize}" Content="6.5"/>
+            </Grid>
+        </ContentControl>
+        <ContentControl d:IsLocked="True">
+            <Grid Margin="12" HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Border Grid.Column="0" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.RowSpan="2" BorderBrush="{DynamicResource MenuBorder}" CornerRadius="0.5" BorderThickness="1">
+                    <Path Fill="{DynamicResource TextFore}" SnapsToDevicePixels="True" Stretch="Uniform" Width="17" Height="17" Margin="2" Data="{DynamicResource FatalGeometry}"/>
+                </Border>
+                <StackPanel Grid.Column="1" Grid.RowSpan="2" Margin="6,0,0,0">
+                    <TextBlock Text="项目优先级" FontSize="{DynamicResource SubFontSize}"></TextBlock>
+                    <TextBlock Text="总项目18" FontSize="{DynamicResource MinFontSize}" Opacity="0.6"></TextBlock>
+                </StackPanel>
+                <ContentControl Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="{DynamicResource LargeFontSize}" Content="3"/>
+            </Grid>
+        </ContentControl>
+    </control:SampleGroup>
 </Grid>
