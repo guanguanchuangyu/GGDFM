@@ -19,24 +19,22 @@ namespace GGCYUI.Controls
         }
 
         #region Orientation
+        public static readonly DependencyProperty OrientationProperty =
+    DependencyProperty.Register("Orientation", typeof(Orientation), typeof(SampleGroup), new PropertyMetadata(default(Orientation)));
         public Orientation Orientation
         {
             get { return (Orientation)GetValue(OrientationProperty); }
             set { SetValue(OrientationProperty, value); }
         }
-
-        public static readonly DependencyProperty OrientationProperty =
-            DependencyProperty.Register("Orientation", typeof(Orientation), typeof(SampleGroup), new PropertyMetadata(default(Orientation)));
         #endregion
         #region ItemStyleSelector
+        public static readonly DependencyProperty ItemStyleSelectorProperty =
+    DependencyProperty.Register("ItemStyleSelector", typeof(StyleSelector), typeof(SampleGroup), new PropertyMetadata(default(StyleSelector)));
         public StyleSelector ItemStyleSelector
         {
             get { return (StyleSelector)GetValue(ItemStyleSelectorProperty); }
             set { SetValue(ItemStyleSelectorProperty, value); }
         }
-
-        public static readonly DependencyProperty ItemStyleSelectorProperty =
-            DependencyProperty.Register("ItemStyleSelector", typeof(StyleSelector), typeof(SampleGroup), new PropertyMetadata(default(StyleSelector))); 
         #endregion
 
         protected override void OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)

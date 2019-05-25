@@ -31,6 +31,8 @@ namespace GGCYUI.Controls
 
 
         #region Circular-#
+        public static readonly DependencyProperty CircularProperty =
+    DependencyProperty.RegisterAttached("Circular", typeof(bool), typeof(BorderElement), new PropertyMetadata(ValueBoxes.FalseBox, OnCircularChanged));
         public static bool GetCircular(DependencyObject obj)
         {
             return (bool)obj.GetValue(CircularProperty);
@@ -40,10 +42,6 @@ namespace GGCYUI.Controls
         {
             obj.SetValue(CircularProperty, value);
         }
-
-        // Using a DependencyProperty as the backing store for Circular.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty CircularProperty =
-            DependencyProperty.RegisterAttached("Circular", typeof(bool), typeof(BorderElement), new PropertyMetadata(ValueBoxes.FalseBox, OnCircularChanged));
 
         private static void OnCircularChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {

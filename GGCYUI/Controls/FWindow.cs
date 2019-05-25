@@ -47,6 +47,8 @@ namespace GGCYUI.Controls
         #endregion
         #region 特有依赖属性
         #region NoClientAreaContent-#无内容客户区域内容
+        public static readonly DependencyProperty NoClientAreaContentProperty =
+    DependencyProperty.Register("NoClientAreaContent", typeof(object), typeof(FWindow), new PropertyMetadata(default(object)));
         /// <summary>
         /// 无内容客户区域内容
         /// </summary>
@@ -55,10 +57,10 @@ namespace GGCYUI.Controls
             get { return (object)GetValue(NoClientAreaContentProperty); }
             set { SetValue(NoClientAreaContentProperty, value); }
         }
-        public static readonly DependencyProperty NoClientAreaContentProperty =
-            DependencyProperty.Register("NoClientAreaContent", typeof(object), typeof(FWindow), new PropertyMetadata(default(object)));
         #endregion
         #region NoClientAreaForeground-#无内容客户区域前背景色
+        public static readonly DependencyProperty NoClientAreaForegroundProperty =
+    DependencyProperty.Register("NoClientAreaForeground", typeof(Brush), typeof(FWindow), new PropertyMetadata(default(Brush)));
         /// <summary>
         /// 无内容客户区域前背景色
         /// </summary>
@@ -67,10 +69,10 @@ namespace GGCYUI.Controls
             get { return (Brush)GetValue(NoClientAreaForegroundProperty); }
             set { SetValue(NoClientAreaForegroundProperty, value); }
         }
-        public static readonly DependencyProperty NoClientAreaForegroundProperty =
-            DependencyProperty.Register("NoClientAreaForeground", typeof(Brush), typeof(FWindow), new PropertyMetadata(default(Brush)));
         #endregion
         #region NoClientAreaBackground-#无内容客户区域后背景色
+        public static readonly DependencyProperty NoClientAreaBackgroundProperty =
+    DependencyProperty.Register("NoClientAreaBackground", typeof(Brush), typeof(FWindow), new PropertyMetadata(default(Brush)));
         /// <summary>
         /// 无内容客户区域前背景色
         /// </summary>
@@ -79,10 +81,10 @@ namespace GGCYUI.Controls
             get { return (Brush)GetValue(NoClientAreaBackgroundProperty); }
             set { SetValue(NoClientAreaBackgroundProperty, value); }
         }
-        public static readonly DependencyProperty NoClientAreaBackgroundProperty =
-            DependencyProperty.Register("NoClientAreaBackground", typeof(Brush), typeof(FWindow), new PropertyMetadata(default(Brush)));
         #endregion
         #region NoClientAreaHeight-#无内容客户区域高度
+        public static readonly DependencyProperty NoClientAreaHeightProperty =
+    DependencyProperty.Register("NoClientAreaHeight", typeof(double), typeof(FWindow), new PropertyMetadata(28.0));
         /// <summary>
         /// 无内容客户区域高度
         /// </summary>
@@ -91,10 +93,10 @@ namespace GGCYUI.Controls
             get { return (double)GetValue(NoClientAreaHeightProperty); }
             set { SetValue(NoClientAreaHeightProperty, value); }
         }
-        public static readonly DependencyProperty NoClientAreaHeightProperty =
-            DependencyProperty.Register("NoClientAreaHeight", typeof(double), typeof(FWindow), new PropertyMetadata(28.0));
         #endregion
         #region ShowNoClientArea-#是否显示无内容区域
+        public static readonly DependencyProperty ShowNoClientAreaProperty =
+    DependencyProperty.Register("ShowNoClientArea", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.TrueBox, OnShowNoClientAreaChanged));
         /// <summary>
         /// 是否显示无内容区域
         /// </summary>
@@ -103,8 +105,6 @@ namespace GGCYUI.Controls
             get { return (bool)GetValue(ShowNoClientAreaProperty); }
             set { SetValue(ShowNoClientAreaProperty, value); }
         }
-        public static readonly DependencyProperty ShowNoClientAreaProperty =
-            DependencyProperty.Register("ShowNoClientArea", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.TrueBox,OnShowNoClientAreaChanged));
 
         private static void OnShowNoClientAreaChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -113,6 +113,8 @@ namespace GGCYUI.Controls
         }
         #endregion
         #region IsFullScreen-#是否全屏显示
+        public static readonly DependencyProperty IsFullScreenProperty =
+    DependencyProperty.Register("IsFullScreen", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.FalseBox, OnIsFullScreenChanged));
         /// <summary>
         /// 是否全屏显示
         /// </summary>
@@ -121,8 +123,6 @@ namespace GGCYUI.Controls
             get { return (bool)GetValue(IsFullScreenProperty); }
             set { SetValue(IsFullScreenProperty, value); }
         }
-        public static readonly DependencyProperty IsFullScreenProperty =
-            DependencyProperty.Register("IsFullScreen", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.FalseBox,OnIsFullScreenChanged));
 
         private static void OnIsFullScreenChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -131,14 +131,13 @@ namespace GGCYUI.Controls
         }
         #endregion
         #region ShowTitle-#是否显示标题名
+        public static readonly DependencyProperty ShowTitleProperty =
+    DependencyProperty.Register("ShowTitle", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.TrueBox));
         public bool ShowTitle
         {
             get { return (bool)GetValue(ShowTitleProperty); }
             set { SetValue(ShowTitleProperty, value); }
         }
-
-        public static readonly DependencyProperty ShowTitleProperty =
-            DependencyProperty.Register("ShowTitle", typeof(bool), typeof(FWindow), new PropertyMetadata(ValueBoxes.TrueBox));
         #endregion
 
         #endregion
