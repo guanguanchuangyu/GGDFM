@@ -8,11 +8,23 @@
         <UniformGrid FocusVisualStyle="{x:Null}" Columns="1"></UniformGrid>
     </ItemsPanelTemplate>
     <Style x:Key="SampleGroupBaseStyle" TargetType="{x:Type control:SampleGroup}">
+        <Setter Property="control:BorderElement.CornerRadius" Value="0"/>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
                     <UniformGrid FocusVisualStyle="{x:Null}" Rows="1"></UniformGrid>
                 </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="control:SampleGroup">
+                    <Border CornerRadius="{Binding Path=(control:BorderElement.CornerRadius),RelativeSource={RelativeSource Mode=TemplatedParent}}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="True" BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}">
+                        <ItemsPresenter></ItemsPresenter>
+                    </Border>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Style.Triggers>
