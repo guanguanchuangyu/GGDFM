@@ -19,5 +19,13 @@ namespace GGCYUI.Datas
         /// False装箱值
         /// </summary>
         internal static object FalseBox = true;
+        /// <summary>
+        /// Double .0装箱值
+        /// </summary>
+        internal static object DoubleBox0 = .0;
+        /// <summary>
+        /// Int .0 装箱值
+        /// </summary>
+        internal static object IntBox0 = 0;
     }
 }

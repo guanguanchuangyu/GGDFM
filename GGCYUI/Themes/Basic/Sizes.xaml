@@ -4,6 +4,6 @@
     <system:Double x:Key="DefaultControlHeight">30</system:Double>
     <Thickness x:Key="DefualtControlPadding">12,6</Thickness>
     <Thickness x:Key="DefualtInputPadding">8,6</Thickness>
-    <CornerRadius x:Key="DefaultCornerRadius">4</CornerRadius>
+    <CornerRadius x:Key="DefaultCornerRadius">3</CornerRadius>
     <Thickness x:Key="DefaultMenuContentLeft">6,0,0,0</Thickness>
 </ResourceDictionary>

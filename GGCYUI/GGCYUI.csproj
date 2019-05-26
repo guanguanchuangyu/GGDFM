@@ -110,6 +110,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Col.cs" />
     <Compile Include="Controls\ControlElement.cs" />
     <Compile Include="Controls\BorderElement.cs" />
     <Compile Include="Controls\Converters\BorderCircularConverter.cs" />
@@ -117,8 +118,10 @@
     <Compile Include="Controls\Converters\NameToObjectConverter.cs" />
     <Compile Include="Controls\FWindow.cs" />
     <Compile Include="Controls\IconElement.cs" />
+    <Compile Include="Controls\Row.cs" />
     <Compile Include="Controls\SampleGroup.cs" />
     <Compile Include="Controls\SimplePanel.cs" />
+    <Compile Include="Datas\ColLayoutStatus.cs" />
     <Compile Include="Datas\ValueBoxes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -133,8 +136,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Tools\ColLayout.cs" />
     <Compile Include="Tools\ResourceToolkits.cs" />
     <Compile Include="Tools\UIElementExtension.cs" />
+    <Compile Include="Tools\ValidateHelper.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -146,6 +151,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controls\Attaches\" />
+    <Folder Include="Controls\Grid\" />
     <Folder Include="Controls\Panel\" />
     <Folder Include="Resources\" />
   </ItemGroup>

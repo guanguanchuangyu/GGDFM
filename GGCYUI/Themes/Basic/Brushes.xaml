@@ -6,7 +6,13 @@
     <SolidColorBrush x:Key="MenuBg" Color="{DynamicResource PrimaryDarkColor}"/>
     <SolidColorBrush x:Key="MenuFore" Color="{DynamicResource  AssistantWhiteColor}"/>
     <SolidColorBrush x:Key="MenuMouseOverBg" Color="{DynamicResource AssistantWhiteColor}" Opacity="0.5"/>
-    <SolidColorBrush x:Key="MenuMousePressedBg" Color="{DynamicResource PrimaryBlueColor}"/>
+    <SolidColorBrush x:Key="MenuMousePressedBg" Color="{DynamicResource PrimaryGreenColor}"/>
     <SolidColorBrush x:Key="BorderBrush" Color="Transparent"></SolidColorBrush>
     <SolidColorBrush x:Key="MenuBorder" Color="{DynamicResource AssistantDarkColor}"></SolidColorBrush>
+    <SolidColorBrush x:Key="PrimaryYellowBrush" Color="{DynamicResource PrimaryYellowColor}"/>
+    <SolidColorBrush x:Key="PrimaryPurpleBrush" Color="{DynamicResource PrimaryPurpleColor}"/>
+    <SolidColorBrush x:Key="PrimaryGreenBrush" Color="{DynamicResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="AssistantGrayBrush" Color="{DynamicResource AssistantGrayColor}"/>
+    <SolidColorBrush x:Key="AssistantBlueBrush" Color="{DynamicResource AssistantBlueColor}"/>
+    <SolidColorBrush x:Key="AssistantOrangeBrush" Color="{DynamicResource AssistantOrangeColor}"/>
 </ResourceDictionary>
