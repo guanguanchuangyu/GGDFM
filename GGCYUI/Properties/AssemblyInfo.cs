@@ -17,6 +17,7 @@ using System.Windows.Markup;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: XmlnsDefinition("http://www.ggcy/ggcy", "GGCYUI.Controls")]
+[assembly: XmlnsDefinition("http://www.ggcy/ggcy", "GGCYUI.Tools")]
 [assembly: XmlnsPrefix("http://www.ggcy/ggcy", "controls")]
 //将 ComVisible 设置为 false 将使此程序集中的类型
 //对 COM 组件不可见。  如果需要从 COM 访问此程序集中的类型，

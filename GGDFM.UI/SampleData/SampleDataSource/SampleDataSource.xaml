@@ -6,7 +6,7 @@
 <SampleDataSource:SampleDataSource xmlns:SampleDataSource="clr-namespace:Expression.Blend.SampleData.SampleDataSource">
 	<SampleDataSource:SampleDataSource.Menu_DataSource>
 		<SampleDataSource:Menu_DataSourceItem MenuItemIcon="WindowsGeometry" MenuItemName="首      页" Content="GGDFM.UI.Views.HomeUCtl"/>
-		<SampleDataSource:Menu_DataSourceItem MenuItemIcon="BubbleTailGeometry" MenuItemName="文件管理" Content="Praesent vivamus"/>
+		<SampleDataSource:Menu_DataSourceItem MenuItemIcon="BubbleTailGeometry" MenuItemName="文件管理" Content="GGDFM.UI.Views.FileManagerUCtl"/>
 		<SampleDataSource:Menu_DataSourceItem MenuItemIcon="ErrorGeometry" MenuItemName="日志管理" Content="Fusce est ante"/>
 		<SampleDataSource:Menu_DataSourceItem MenuItemIcon="FatalGeometry" MenuItemName="系统管理" Content="Eget hac dictumst"/>
 	</SampleDataSource:SampleDataSource.Menu_DataSource>

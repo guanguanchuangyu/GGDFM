@@ -88,6 +88,7 @@ namespace GGCYUI.Controls
                 var childWidth = cellCount * itemWidth;
                 //重新设定当前矩形的宽度
                 childBounds.Width = childWidth;
+                child.Arrange(childBounds);
                 //重新设定子集的横坐标
                 childBounds.X = childWidth + child.Offset * itemWidth;
             }

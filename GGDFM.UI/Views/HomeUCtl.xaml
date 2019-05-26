@@ -12,8 +12,8 @@
         <RowDefinition Height="Auto"></RowDefinition>
         <RowDefinition></RowDefinition>
     </Grid.RowDefinitions>
-    <Grid Grid.Row="0">
-        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" d:IsLocked="True">
+    <Grid Grid.Row="0" d:IsLocked="True">
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
             <TextBlock Text="项目概况" FontSize="{DynamicResource HeadFontSize}" Foreground="{DynamicResource TextFore}"/>
             <TextBlock Text="欢迎回来，【用户名称】" FontSize="{DynamicResource LabelFontSize}" Foreground="{DynamicResource TextFore}" Opacity="0.6"/>
         </StackPanel>
@@ -21,7 +21,7 @@
     </Grid>
     <control:SampleGroup Grid.Row="1" Margin="0,12,0,0" VerticalContentAlignment="Center" VerticalAlignment="Top"
                          Background="{DynamicResource MenuFore}"
-                         control:BorderElement.CornerRadius="{DynamicResource DefaultCornerRadius}">
+                         control:BorderElement.CornerRadius="{DynamicResource DefaultCornerRadius}" d:IsLocked="True">
         <ContentControl d:IsLocked="True" Cursor="Hand">
             <Border Padding="0,20,0,20"
                     BorderBrush="{DynamicResource AssistantGrayBrush}" 
@@ -164,7 +164,7 @@
             </ContentControl>
         </control:SampleGroup>
     </Border>-->
-    <control:Row Gutter="18" Grid.Row="2" Margin="0,12" SnapsToDevicePixels="True">
+    <control:Row Gutter="18" Grid.Row="2" Margin="0,12" SnapsToDevicePixels="True" d:IsLocked="True">
         <control:Col Span="8">
             <Border Background="{DynamicResource MenuFore}"
              CornerRadius="{DynamicResource DefaultCornerRadius}"
@@ -182,5 +182,5 @@
         </control:Col>
     </control:Row>
     <Border Grid.Row="3" Background="{DynamicResource MenuFore}"
-           MinHeight="200" CornerRadius="{DynamicResource DefaultCornerRadius}"></Border>
+           MinHeight="200" CornerRadius="{DynamicResource DefaultCornerRadius}" d:IsLocked="True"></Border>
 </Grid>

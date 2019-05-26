@@ -18,7 +18,7 @@
     <controls:FWindow.NoClientAreaContent>
         <uc:WindowTitle/>
     </controls:FWindow.NoClientAreaContent>
-    <Grid Background="{DynamicResource MainBg}">
+    <Grid Background="{DynamicResource MainBg}" d:IsLocked="True">
         <Grid.ColumnDefinitions>
             <ColumnDefinition  Width="2*" MinWidth="44"/>
             <ColumnDefinition Width="9*"/>

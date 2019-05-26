@@ -87,7 +87,6 @@ namespace GGCYUI.Controls
             }
             return result;
         }
-
         #endregion
     }
 }

@@ -8,6 +8,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/GGCYUI;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="Themes/Generic.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <SampleDataSource:SampleDataSource x:Key="SampleDataSource" d:IsDataSource="True"/>
             <vm:ViewModelLocator xmlns:vm="clr-namespace:GGDFM.UI.ViewModels"

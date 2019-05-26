@@ -73,6 +73,9 @@
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
     <Compile Include="ViewModels\MenuViewModel.cs" />
+    <Compile Include="Views\FileManagerUCtl.xaml.cs">
+      <DependentUpon>FileManagerUCtl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomeUCtl.xaml.cs">
       <DependentUpon>HomeUCtl.xaml</DependentUpon>
     </Compile>
@@ -125,6 +128,14 @@
     <Page Include="SampleData\SampleDataSource\SampleDataSource.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\FileManagerUCtl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\HomeUCtl.xaml">
       <SubType>Designer</SubType>
